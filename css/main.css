@@ -11872,21 +11872,19 @@ body {
   --bs-gutter-x: 3em;
 }
 
+h2 {
+  margin-bottom: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
 .card {
-  --bs-card-bg: transparent;
+  --bs-card-bg: hsl(0, 0%, 100%);
   --bs-card-border-width: 0;
   --bs-card-border-color: transparent;
-  --bs-card-border-radius: 15px;
-}
-
-.card-header:first-child {
-  --bs-card-inner-border-radius: 0;
-}
-
-.card-header {
-  --bs-card-cap-padding-x: 0;
-  --bs-card-cap-padding-y: 0;
-  margin-bottom: 1.5em;
+  --bs-card-border-radius: 8px;
 }
 
 .card-body {
@@ -11895,7 +11893,7 @@ body {
 }
 
 .card-title {
-  --bs-card-title-spacer-y: 0.5454545455em;
+  --bs-card-title-spacer-y: 0.4em;
   --bs-card-title-color: hsl(234, 12%, 34%);
 }
 
@@ -11908,11 +11906,6 @@ body {
   color: hsl(212, 86%, 64%) !important;
 }
 
-@media (min-width: 48em) {
-  .card-title {
-    --bs-card-title-spacer-y: 0.7272727273em;
-  }
-}
 h1,
 h2,
 h3,
@@ -11981,79 +11974,49 @@ picture {
   text-decoration: none;
 }
 
-.card {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-direction: normal;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.section {
   width: 100%;
   max-width: 28em;
   margin: 2.6666666667em 0 4em;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
 }
 
-.card-content,
-.card-group,
-.card-block,
-.card-item {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-direction: normal;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.card-content {
+.section-header {
   padding-top: 2.6666666667em;
   margin-bottom: 5.0666666667em;
   text-align: center;
 }
 
-.card-title {
+.section-title {
   font-weight: 200;
 }
 
-.card-subtitle {
+.section-subtitle {
   margin-bottom: 0.6666666667em;
   font-size: 1.6em;
   color: hsl(234, 12%, 34%);
+  line-height: 1.25;
 }
 
 .card-group,
 .card-block {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-direction: normal;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 1.6em;
 }
 
 .card {
-  position: relative;
   min-height: 14.6666666667em;
   padding: 1.6em;
-  background-color: hsl(0, 0%, 100%);
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
   -webkit-box-shadow: 0px 1em 1.3333333333em 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 1em 1.3333333333em 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1em 1.3333333333em 0 rgba(0, 0, 0, 0.1);
@@ -12086,10 +12049,6 @@ picture {
   background-color: hsl(212, 86%, 64%);
 }
 
-.card-title {
-  margin-bottom: 0.4em;
-}
-
 .card-text {
   font-size: 0.8666666667em;
 }
@@ -12114,18 +12073,18 @@ picture {
 }
 
 @media (min-width: 48em) {
-  .card {
+  .section {
     max-width: 74em;
   }
-  .card-content {
+  .section-header {
     max-width: 36em;
     margin-bottom: 4em;
   }
-  .card-title,
-  .card-subtitle {
+  .section-title,
+  .section-subtitle {
     font-size: 2.4em;
   }
-  .card-subtitle {
+  .section-subtitle {
     margin-bottom: 0.4444444444em;
   }
   .card-group {
@@ -12170,11 +12129,6 @@ main > .container-fluid {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
 footer,

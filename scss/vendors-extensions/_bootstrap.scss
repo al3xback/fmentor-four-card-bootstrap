@@ -16,21 +16,19 @@ body {
 	--bs-gutter-x: 3em;
 }
 
+h2 {
+	margin-bottom: 0;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
 .card {
-	--bs-card-bg: transparent;
+	--bs-card-bg: #{var.$color-white};
 	--bs-card-border-width: 0;
 	--bs-card-border-color: transparent;
-	--bs-card-border-radius: 15px;
-}
-
-.card-header:first-child {
-	--bs-card-inner-border-radius: 0;
-}
-
-.card-header {
-	--bs-card-cap-padding-x: 0;
-	--bs-card-cap-padding-y: 0;
-	margin-bottom: func.em(24);
+	--bs-card-border-radius: 8px;
 }
 
 .card-body {
@@ -39,7 +37,7 @@ body {
 }
 
 .card-title {
-	--bs-card-title-spacer-y: #{func.em(12, 22)};
+	--bs-card-title-spacer-y: #{func.em(8, 20)};
 	--bs-card-title-color: #{var.$color-dark-blue};
 }
 
@@ -53,7 +51,4 @@ body {
 }
 
 @media (min-width: 48em) {
-	.card-title {
-		--bs-card-title-spacer-y: #{func.em(16, 22)};
-	}
 }

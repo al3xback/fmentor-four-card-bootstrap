@@ -2,52 +2,40 @@
 @use '../abstracts/functions' as func;
 @use '../abstracts/mixins' as mix;
 
-.card {
-	@include mix.flexbox;
-	@include mix.align-items(center);
-	@include mix.flex-direction(column);
+.section {
 	width: 100%;
 	max-width: func.em(420, var.$font-size-primary);
 	margin: func.em(40, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
-	@include mix.border-radius(8px);
 }
 
-.card-content,
-.card-group,
-.card-block,
-.card-item {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
-}
-
-.card-content {
+.section-header {
 	padding-top: func.em(40, var.$font-size-primary);
 	margin-bottom: func.em(76, var.$font-size-primary);
 	text-align: center;
 }
 
-.card-title {
+.section-title {
 	font-weight: var.$font-weight-200;
 }
 
-.card-subtitle {
+.section-subtitle {
 	margin-bottom: func.em(16, 24);
 	font-size: func.em(24, var.$font-size-primary);
 	color: var.$color-dark-blue;
+	line-height: 1.25;
 }
 
 .card-group,
 .card-block {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
 	gap: func.em(24, var.$font-size-primary);
 }
 
 .card {
-	position: relative;
 	min-height: func.em(220, var.$font-size-primary);
 	padding: func.em(24, var.$font-size-primary);
-	background-color: var.$color-white;
-	@include mix.border-radius(8px);
 	@include mix.box-shadow(
 		0px func.em(15, var.$font-size-primary)
 			func.em(20, var.$font-size-primary) 0 rgba(0, 0, 0, 0.1)
@@ -81,10 +69,6 @@
 	background-color: var.$color-blue;
 }
 
-.card-title {
-	margin-bottom: func.em(8, 20);
-}
-
 .card-text {
 	font-size: func.em(13, var.$font-size-primary);
 }
@@ -101,21 +85,21 @@
 }
 
 @media (min-width: 48em) {
-	.card {
+	.section {
 		max-width: func.em(1110, var.$font-size-primary);
 	}
 
-	.card-content {
+	.section-header {
 		max-width: func.em(540, var.$font-size-primary);
 		margin-bottom: func.em(60, var.$font-size-primary);
 	}
 
-	.card-title,
-	.card-subtitle {
+	.section-title,
+	.section-subtitle {
 		font-size: func.em(36, var.$font-size-primary);
 	}
 
-	.card-subtitle {
+	.section-subtitle {
 		margin-bottom: func.em(16, 36);
 	}
 
