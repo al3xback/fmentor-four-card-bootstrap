@@ -28,18 +28,16 @@
 
 .card-group,
 .card-block {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
+	display: flex;
+	flex-direction: column;
 	gap: func.em(24, var.$font-size-primary);
 }
 
 .card {
 	min-height: func.em(220, var.$font-size-primary);
 	padding: func.em(24, var.$font-size-primary);
-	@include mix.box-shadow(
-		0px func.em(15, var.$font-size-primary)
-			func.em(20, var.$font-size-primary) 0 rgba(0, 0, 0, 0.1)
-	);
+	box-shadow: 0px func.em(15, var.$font-size-primary)
+		func.em(20, var.$font-size-primary) 0 rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 }
 
@@ -74,8 +72,8 @@
 }
 
 .card-image {
-	@include mix.flexbox;
-	@include mix.justify-content(flex-end);
+	display: flex;
+	justify-content: flex-end;
 	margin-top: auto;
 }
 
@@ -104,11 +102,11 @@
 	}
 
 	.card-group {
-		@include mix.flex-direction(row);
+		flex-direction: row;
 	}
 
 	.card-block {
-		@include mix.justify-content(center);
-		@include mix.flex(1);
+		justify-content: center;
+		flex: 1;
 	}
 }
