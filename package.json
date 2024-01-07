@@ -1,7 +1,7 @@
 {
 	"name": "fmentor-four-card-bootstrap",
 	"version": "1.0.0",
-	"description": "four card feature section with bootstrap 5",
+	"description": "four card feature section using bootstrap",
 	"main": "index.js",
 	"scripts": {
 		"sass-dev": "sass --watch scss/main.scss css/main.css",
