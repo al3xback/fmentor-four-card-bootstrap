@@ -2,11 +2,11 @@
 @use '../abstracts/functions' as func;
 
 .section {
-	gap: func.em(76, var.$font-size-primary);
+	gap: func.em(40, var.$font-size-primary);
 	width: 100%;
 	max-width: func.em(420, var.$font-size-primary);
-	margin: func.em(40, var.$font-size-primary) 0
-		func.em(60, var.$font-size-primary);
+	margin: func.em(50, var.$font-size-primary) 0
+		func.em(80, var.$font-size-primary);
 }
 
 .section-header {
@@ -35,8 +35,7 @@
 .card {
 	min-height: func.em(220, var.$font-size-primary);
 	padding: func.em(24, var.$font-size-primary);
-	box-shadow: 0px func.em(15, var.$font-size-primary)
-		func.em(20, var.$font-size-primary) 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 }
 
@@ -85,6 +84,12 @@
 	.section {
 		gap: func.em(60, var.$font-size-primary);
 		max-width: func.em(1110, var.$font-size-primary);
+		margin: func.em(70, var.$font-size-primary) 0
+			func.em(100, var.$font-size-primary);
+	}
+
+	.section__head {
+		align-items: center;
 	}
 
 	.section-header {
