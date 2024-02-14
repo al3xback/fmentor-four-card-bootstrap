@@ -37,7 +37,7 @@ p:last-child {
 }
 
 .card-title {
-	--bs-card-title-spacer-y: #{func.em(8, 20)};
+	--bs-card-title-spacer-y: 0;
 	--bs-card-title-color: #{var.$color-dark-blue};
 }
 
@@ -50,5 +50,5 @@ p:last-child {
 	color: #{var.$color-blue} !important;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 57.5em) {
 }
