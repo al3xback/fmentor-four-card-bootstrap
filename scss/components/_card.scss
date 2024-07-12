@@ -13,15 +13,16 @@
 	text-align: center;
 }
 
-.cards-summary-title {
+.cards-summary-subtitle {
+	margin-bottom: func.em(6, 24);
+	font-size: func.em(24, var.$font-size-primary);
 	font-weight: var.$font-weight-200;
+	color: var.$color-dark-blue;
+	line-height: 1;
 }
 
-.cards-summary-subtitle {
+.cards-summary-title {
 	margin-bottom: func.em(16, 24);
-	font-size: func.em(24, var.$font-size-primary);
-	color: var.$color-dark-blue;
-	line-height: 1.25;
 }
 
 .cards,
